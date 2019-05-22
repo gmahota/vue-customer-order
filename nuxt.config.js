@@ -52,13 +52,6 @@ module.exports = {
   },
 
   generate: {
-    routes: [
-      '/eventos/details/1',
-      '/eventos/details/2',
-      '/eventos/details/3',
-      '/eventos/details/4',
-      '/eventos/details/5',
-      '/eventos/details/6'
-    ]
+    
   }
 }
