@@ -29,6 +29,7 @@
             v-model="item.model"
             :prepend-icon="item.model ? item.icon : item['icon-alt']"
             append-icon=""
+            :to="url"
           >
             <template v-slot:activator>
               <v-list-tile>
@@ -42,7 +43,7 @@
             <v-list-tile
               v-for="(child, i) in item.children"
               :key="i"
-              @click=""
+              :to="item.url"
             >
               <v-list-tile-action v-if="child.icon">
                 <v-icon>{{ child.icon }}</v-icon>
@@ -54,7 +55,7 @@
               </v-list-tile-content>
             </v-list-tile>
           </v-list-group>
-          <v-list-tile v-else :key="item.text" @click="">
+          <v-list-tile v-else :key="item.text" :to="item.url">
             <v-list-tile-action>
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
@@ -191,7 +192,7 @@
       drawer: false,
 
       items: [
-        { icon: 'contacts', text: 'Contacts' },
+        { icon: 'contacts', text: 'Encomendas', url: '/orders/' },
         { icon: 'history', text: 'Frequently contacted' },
         { icon: 'content_copy', text: 'Duplicates' },
         {
