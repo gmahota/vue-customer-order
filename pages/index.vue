@@ -1,30 +1,12 @@
 <template>
-  <v-container>
-    <v-row-expand-transition>
-      <v-carousel>
-        <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src"></v-carousel-item>
-      </v-carousel>
-    </v-row-expand-transition>
-
-    <v-row-expand-transition>
-      <v-item-group v-model="window" class="shrink mr-4" mandatory tag="v-flex">
-        <v-item v-for="n in length" :key="n">
-          <div slot-scope="{ active, toggle }">
-            <v-btn :input-value="active" icon @click="toggle">
-              <v-icon>mdi-record</v-icon>
-            </v-btn>
-          </div>
-        </v-item>
-      </v-item-group>
-
-      <v-flex>
-        <v-window v-model="window" class="elevation-1" vertical>
-          <v-window-item v-for="n in length" :key="n">
-            <v-card flat>
+  <v-container grid-list-md text-xs-center>
+    <v-layout aalign-center justify-center row fill-height>
+      <v-flex xs6>
+        <v-card flat>
               <v-card-text>
                 <v-layout align-center mb-3>
                   <v-avatar color="grey" class="mr-3"></v-avatar>
-                  <strong class="title">Title {{ n }}</strong>
+                  <strong class="title">BEM VINDO AO AGNUS CMS</strong>
                   <v-spacer></v-spacer>
                   <v-btn icon>
                     <v-icon>mdi-account</v-icon>
@@ -38,10 +20,18 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </v-card-text>
             </v-card>
-          </v-window-item>
-        </v-window>
+
       </v-flex>
-    </v-row-expand-transition>
+      <v-flex xs6>
+        <v-carousel>
+          <v-carousel-item v-for="(item,i) in items" :key="i" :src="item.src" ></v-carousel-item>
+        </v-carousel>
+      </v-flex>
+
+      
+
+    </v-layout>
+
 
     <v-row-expand-transition>
       <v-flex>
