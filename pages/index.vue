@@ -6,18 +6,18 @@
               <v-card-text>
                 <v-layout align-center mb-3>
                   <v-avatar color="grey" class="mr-3"></v-avatar>
-                  <strong class="title">BEM VINDO AO AGNUS CMS</strong>
+                  <strong class="title">BEM VINDO AO AGNUS CRM</strong>
                   <v-spacer></v-spacer>
                   <v-btn icon>
                     <v-icon>mdi-account</v-icon>
                   </v-btn>
                 </v-layout>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Nos dias de hoje, as Organizações procuram integração, automatização e mobilidade nos processos de negócio. </p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>A integração, automatização e amobilidade tornam-se aspectos estratégicos para reduzir custos, complexidade e tempo, assim como para aumentar a produtividade.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>A satisfação do cliente e a performance de TI. Com estas questões em mente, apresentamos os nossos produtos.</p>
               </v-card-text>
             </v-card>
 
@@ -34,8 +34,9 @@
 
 
     <v-row-expand-transition>
-      <v-flex>
+      <v-flex xs6>
         <v-sheet height="500">
+          <h1> Roadmap</h1>
           <v-calendar :now="today" :value="today" color="primary">
             <template v-slot:day="{ present, past, date }">
               <v-layout fill-height>
