@@ -6,7 +6,6 @@ import Vuetify, {
   VToolbar
 } from 'vuetify/lib'
 
-
 import { Ripple } from 'vuetify/lib/directives'
 
 Vue.use(Vuetify, {

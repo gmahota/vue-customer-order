@@ -1,5 +1,6 @@
 const nodeExternals = require('webpack-node-externals')
 const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -17,11 +18,16 @@ module.exports = {
     ]
   },
   plugins: ['~/plugins/vuetify.js'],
+  
   css: ['~/assets/style/app.styl'],
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+
+  modules: [
+    '@nuxtjs/style-resources',
+  ],
   /*
   ** Build configuration
   */
