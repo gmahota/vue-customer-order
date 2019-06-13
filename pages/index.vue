@@ -48,6 +48,7 @@
 </template>
 
 <script>
+//Template: https://free-blog.vuetifyjs.com/?ref=vuetifyjs.com
   export default {
     name: 'Home',
     components: {

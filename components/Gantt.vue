@@ -23,3 +23,7 @@ export default {
 }
 </script>
 
+<style>
+    @import "dhtmlx-gantt/codebase/dhtmlxgantt.css";
+</style>
+
