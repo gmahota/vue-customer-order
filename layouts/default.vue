@@ -120,8 +120,9 @@
       drawer: false,
 
       items: [
-        { icon: 'contacts', text: 'Encomendas', url: '/orders/' },
+        { icon: 'account-details', text: 'Encomendas', url: '/orders/' },
         { icon: 'history', text: 'Reservas', url: '/reservas/' },
+        { icon: 'home', text: 'Quartos', url: '/quartos/' },
         // { icon: 'content_copy', text: 'Duplicates' },
         // {
         //   icon: 'keyboard_arrow_up',

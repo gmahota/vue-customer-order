@@ -42,7 +42,7 @@ function getDate(hours) {
 let tasks = [
   {
     id: 1,
-    label: "Suite",
+    label: "Room 1",
     user:
       '<a href="https://www.google.com/search?q=John+Doe" target="_blank" style="color:#0077c0;">Marlin Alface</a>',
     start: getDate(-24 * 5),
@@ -60,10 +60,9 @@ let tasks = [
   },
   {
     id: 2,
-    label: "Piscina",
+    label: "Room 2",
     user:
       '<a href="https://www.google.com/search?q=Peter+Parker" target="_blank" style="color:#0077c0;">Peter Parker</a>',
-    parentId: 1,
     start: getDate(-24 * 4),
     duration: 4 * 24 * 60 * 60 * 1000,
     percent: 50,
@@ -78,10 +77,9 @@ let tasks = [
   },
   {
     id: 3,
-    label: "Teste Quarto.",
+    label: "Room 3",
     user:
       '<a href="https://www.google.com/search?q=John+Wayne" target="_blank" style="color:#0077c0;">John Wayne</a>',
-    parentId: 2,
     start: getDate(-24 * 3),
     duration: 2 * 24 * 60 * 60 * 1000,
     percent: 100,
@@ -89,7 +87,7 @@ let tasks = [
   },
   {
     id: 4,
-    label: "Quarto + Cama Casal",
+    label: "Room 4",
     user:
       '<a href="https://www.google.com/search?q=Clark+Kent" target="_blank" style="color:#0077c0;">Clark Kent</a>',
     start: getDate(-24 * 2),
@@ -100,11 +98,9 @@ let tasks = [
   },
   {
     id: 5,
-    label:
-      "One billion, gajillion, fafillion... shabadylu...mil...shabady......uh, Yen.",
+    label: "Room 5",
     user:
       '<a href="https://www.google.com/search?q=Austin+Powers" target="_blank" style="color:#0077c0;">Austin Powers</a>',
-    parentId: 4,
     start: getDate(0),
     duration: 2 * 24 * 60 * 60 * 1000,
     percent: 10,
@@ -118,10 +114,9 @@ let tasks = [
   },
   {
     id: 6,
-    label: "Butch Mario and the Luigi Kid",
+    label: "Room 6",
     user:
       '<a href="https://www.google.com/search?q=Mario+Bros" target="_blank" style="color:#0077c0;">Mario Bros</a>',
-    parentId: 5,
     start: getDate(24),
     duration: 1 * 24 * 60 * 60 * 1000,
     percent: 50,
@@ -136,7 +131,7 @@ let tasks = [
   },
   {
     id: 7,
-    label: "Devon, the old man wanted me, it was his dying request",
+    label: "Room 7",
     user:
       '<a href="https://www.google.com/search?q=Knight+Rider" target="_blank" style="color:#0077c0;">Knight Rider</a>',
     parentId: 2,
@@ -162,7 +157,7 @@ let tasks = [
   {
     id: 9,
     label:
-      "This better be important, woman. You are interrupting my very delicate calculations.",
+      "Room 9",
     user:
       '<a href="https://www.google.com/search?q=Dexter\'s+Laboratory" target="_blank" style="color:#0077c0;">Dexter\'s Laboratory</a>',
     parentId: 8,
@@ -180,7 +175,7 @@ let tasks = [
   },
   {
     id: 10,
-    label: "current task",
+    label: "Room 10",
     user:
       '<a href="https://www.google.com/search?q=Johnattan+Owens" target="_blank" style="color:#0077c0;">Johnattan Owens</a>',
     start: getDate(24 * 5),
