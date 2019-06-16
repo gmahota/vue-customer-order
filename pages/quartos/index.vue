@@ -14,9 +14,7 @@
 
 <script>
 export default {
-  name: "Home",
-  //Note that our "data" object is returned from a function call;
-  //this is required to ensure every instance has its own "data" object which can be managed independently
+  name: "Quartos",
   data() {
     return {
       msg: "Gestão dos Quartos",

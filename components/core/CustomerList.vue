@@ -4,7 +4,7 @@
       <v-flex xs12>
         <div>
           <v-toolbar flat color="white">
-            <v-toolbar-title>Lista de Quartos</v-toolbar-title>
+            <v-toolbar-title>Lista de Clientes</v-toolbar-title>
             <v-divider class="mx-2" inset vertical></v-divider>
             <v-spacer></v-spacer>
             <v-dialog v-model="dialog" max-width="500px">
@@ -18,27 +18,19 @@
 
                 <v-card-text>
                   <v-container grid-list-md>
+                   
                     <v-layout wrap>
                       <v-flex xs12 sm6 md4>
                         <v-text-field v-model="editedItem.code" label="Codigo"></v-text-field>
                       </v-flex>
                       <v-flex xs12 sm6 md4>
-                        <v-text-field v-model="editedItem.desc" label="Descrição"></v-text-field>
+                        <v-text-field v-model="editedItem.name" label="Descrição"></v-text-field>
                       </v-flex>
                       <v-flex xs12 sm6 md4>
-                        <v-combobox
-                          v-model="editedItem.type"
-                          :items="roomTypeList"
-                          label="Selecione o Tipo de Quarto"
-                        ></v-combobox>
+                        <v-text-field v-model="editedItem.email" label="Email"></v-text-field>
                       </v-flex>
                       <v-flex xs12 sm6 md4>
-                        <v-combobox
-                          v-model="editedItem.status"
-                          :items="roomStatusList"
-                          label="Selecione o Estado"
-                        ></v-combobox>
-                        <!-- <v-text-field v-model="editedItem.status" label="Status"></v-text-field> -->
+                        <v-text-field v-model="editedItem.contact[0].mobile" label="Telefone"></v-text-field>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -52,13 +44,13 @@
               </v-card>
             </v-dialog>
           </v-toolbar>
-          <v-data-table :headers="headers" :items="rooms" class="elevation-1">
+          <v-data-table :headers="headers" :items="customers" class="elevation-1">
             <template v-slot:items="props">
               <td class="text-xs-left">{{ props.item.id }}</td>
               <td class="text-xs-left">{{ props.item.code }}</td>
-              <td class="text-xs-left">{{ props.item.desc }}</td>
-              <td class="text-xs-left">{{ props.item.type }}</td>
-              <td class="text-xs-left">{{ props.item.status }}</td>
+              <td class="text-xs-left">{{ props.item.name }}</td>
+              <td class="text-xs-left">{{ props.item.email }}</td>
+              <td class="text-xs-left">{{ props.item.contact[0].mobile }}</td>
               <td class="justify-center layout px-0">
                 <v-icon small class="mr-2" @click="editItem(props.item)">edit</v-icon>
                 <v-icon small @click="deleteItem(props.item)">delete</v-icon>
@@ -76,16 +68,9 @@
  
 <script>
 export default {
-  name: "RoomList",
+  name: "CustomerList",
   data() {
     return {
-      roomStatusList: [
-        "Disponível",
-        "Frigo contado",
-        "Em Limpesa",
-        "Em Manutenção"
-      ],
-      roomTypeList: ["Suite", "Duplo", "Simples","Casal"],
       headers: [
         {
           text: "Id",
@@ -94,25 +79,43 @@ export default {
           value: "id",
           visibility: "hidden"
         },
-        { text: "Quarto", value: "code" },
-        { text: "Descrição", value: "desc" },
-        { text: "Tipo", value: "type" },
-        { text: "Estado", value: "status" }
+        { text: "Codigo", value: "code" },
+        { text: "Nome", value: "name" },
+        { text: "Email", value: "email" },
+        { text: "Telefone", value: "mobile" }
       ],
       editedIndex: -1,
       editedItem: {
         id: 0,
-        code: "",
-        desc: 0,
-        type: "Simples",
-        status: "Disponivel"
+          code: "",
+          name: "",
+          desc: "",
+          email: "",
+          contact:[
+            { 
+                id: 0, code:"", district:"", city:"", address:"",
+                zone:"",mobile:"",primary: true
+            }
+          ],
+          type: "Client",
+          status: "Aberto",
+          other: ""
       },
       defaultItem: {
         id: 0,
-        code: "",
-        desc: 0,
-        type: "Simples",
-        status: "Disponivel"
+          code: "",
+          name: "",
+          desc: "",
+          email: "",
+          contact:[
+            { 
+                id: 0, code:"", district:"", city:"", address:"",
+                zone:"",mobile:"",primary: true
+            }
+          ],
+          type: "Client",
+          status: "Aberto",
+          other: ""
       }
     };
   },
@@ -130,15 +133,15 @@ export default {
 
   methods: {
     editItem(item) {
-      this.editedIndex = this.rooms.indexOf(item);
+      this.editedIndex = this.customers.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
     },
 
     deleteItem(item) {
-      const index = this.rooms.indexOf(item);
+      const index = this.customers.indexOf(item);
       confirm("Are you sure you want to delete this item?") &&
-        this.rooms.splice(index, 1);
+        this.customers.splice(index, 1);
     },
 
     close() {
@@ -151,13 +154,15 @@ export default {
 
     save() {
       if (this.editedIndex > -1) {
-        Object.assign(this.rooms[this.editedIndex], this.editedItem);
+        Object.assign(this.customers[this.editedIndex], this.editedItem);
       } else {
-        this.rooms.push(this.editedItem);
+        this.customers.push(this.editedItem);
       }
       this.close();
     }
   },
-  props: ["rooms"]
+
+  //CHANGE: Add the 'removeBook' prop
+  props: ["customers"]
 };
 </script>
