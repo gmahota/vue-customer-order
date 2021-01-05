@@ -15,7 +15,7 @@
     "@fullcalendar/resource-timeline": "^4.2.0",
     "@fullcalendar/vue": "^4.2.2",
     "@nuxtjs/style-resources": "^0.1.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "dhtmlx-gantt": "^6.1.6",
     "dayjs": "^1.8.14",
     "gantt-elastic": "^1.0.3",
