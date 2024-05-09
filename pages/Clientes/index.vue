@@ -23,11 +23,11 @@ name: "Clientes",
         {
           id: 1,
           code: "C001",
-          name: "Guimarães Mahota",
+          name: "Andre Bastos Mahota",
           desc: "Guimarães Mahota",
-          email: "guimaraesmahota@gmail.com",
+          email: "adre.joao@gmail.com",
           contact:[
-              { id: 1, code:"C001", district:"Maputo", city:"Maputo", address:"Maputo",zone:"Baixa",mobile:"+258849535156",primary: true}
+              { id: 1, code:"C001", district:"Maputo", city:"Maputo", address:"Maputo",zone:"Baixa",mobile:"+2583736366232",primary: true}
           ],
           type: "Client",
           status: "Aberto",
@@ -36,13 +36,13 @@ name: "Clientes",
         {
           id: 2,
           code: "C002",
-          name: "Marlin Alface",
-          desc: "Marlin Alface",
-          email: "malface@gmail.com",
+          name: "Mario Joao",
+          desc: "Mario Joao",
+          email: "mario.joao@gmail.com",
           contact:[
             { 
                 id: 1, code:"C001", district:"Maputo", city:"Maputo", address:"Maputo",
-                zone:"Baixa",mobile:"+258849535156",primary: true
+                zone:"Baixa",mobile:"+25882742342",primary: true
             }
           ],
           type: "Client",

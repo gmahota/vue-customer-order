@@ -1,21 +1,12 @@
-import Vue from 'vue'
-import Vuetify, {
-  VApp, // required
-  VNavigationDrawer,
-  VFooter,
-  VToolbar
-} from 'vuetify/lib'
+// import this after install `@mdi/font` package
+import "@mdi/font/css/materialdesignicons.css";
 
-import { Ripple } from 'vuetify/lib/directives'
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
 
-Vue.use(Vuetify, {
-  components: {
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VToolbar
-  },
-  directives: {
-    Ripple
-  }
-})
+export default defineNuxtPlugin((app) => {
+  const vuetify = createVuetify({
+    // ... your configuration
+  });
+  app.vueApp.use(vuetify);
+});
