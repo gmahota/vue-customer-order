@@ -2,7 +2,6 @@
   <v-app light>
     <v-navigation-drawer
       v-model="drawer"
-      :clipped="$vuetify.breakpoint.lgAndUp"
       fixed
       app
     >
@@ -69,7 +68,6 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      :clipped-left="$vuetify.breakpoint.lgAndUp"
       color="blue darken-3"
       dark
       app
@@ -104,7 +102,7 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <nuxt />
+      <NuxtPage />
     </v-content>
     
     
