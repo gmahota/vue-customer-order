@@ -16,7 +16,7 @@
     "@nuxtjs/style-resources": "^1.2.2",
     "axios": "^1.6.8",
     "moment": "^2.30.0",
-    "nuxt": "^3.11.2",
+    "nuxt": "^3.12.4",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
